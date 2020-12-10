@@ -1,0 +1,16 @@
+com/bigdata/covidanalysis/ContinentWiseCount/ContinentWiseCountReducer.class
+com/bigdata/covidanalysis/Driver.class
+com/bigdata/covidanalysis/TopNCountriesWithDeathCount/TopNCountriesWithDeathCountMapper.class
+com/bigdata/covidanalysis/CountryWiseMinMax/CountryWiseMinMaxNewCasesReducer.class
+com/bigdata/covidanalysis/TopNCountriesWithDeathCount/TopNCountriesWithDeathCountReducer.class
+com/bigdata/covidanalysis/CountryWiseMinMax/CustomOutputTuple.class
+com/bigdata/covidanalysis/JoinCountryData/JoinCountryDataReducer.class
+com/bigdata/covidanalysis/CountryWiseDeathCount/CountryWiseDeathCountReducer.class
+com/bigdata/covidanalysis/CountryWiseDeathCount/CountryWiseDeathCountMapper.class
+com/bigdata/covidanalysis/ContinentWiseCount/ContinentWiseCountMapper.class
+com/bigdata/covidanalysis/JoinCountryData/JoinCountryMinMaxMapper.class
+com/bigdata/covidanalysis/DeathsMonthWise/MonthWiseDeathCountReducer.class
+com/bigdata/covidanalysis/DeathsMonthWise/MonthWiseDeathCountMapper.class
+com/bigdata/covidanalysis/CountryWiseMinMax/MinMaxTuple.class
+com/bigdata/covidanalysis/JoinCountryData/JoinCountryTopNMapper.class
+com/bigdata/covidanalysis/CountryWiseMinMax/CountryWiseMinMaxMapper.class

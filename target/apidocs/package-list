@@ -1,0 +1,7 @@
+com.bigdata.covidanalysis
+com.bigdata.covidanalysis.ContinentWiseCount
+com.bigdata.covidanalysis.CountryWiseDeathCount
+com.bigdata.covidanalysis.CountryWiseMinMax
+com.bigdata.covidanalysis.DeathsMonthWise
+com.bigdata.covidanalysis.JoinCountryData
+com.bigdata.covidanalysis.TopNCountriesWithDeathCount
