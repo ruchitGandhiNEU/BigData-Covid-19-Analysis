@@ -18,12 +18,14 @@ import com.bigdata.covidanalysis.DeathsMonthWise.MonthWiseDeathCountReducer;
 import com.bigdata.covidanalysis.JoinCountryData.JoinCountryDataReducer;
 import com.bigdata.covidanalysis.JoinCountryData.JoinCountryMinMaxMapper;
 import com.bigdata.covidanalysis.JoinCountryData.JoinCountryTopNMapper;
+import com.bigdata.covidanalysis.MahoutRecommendation.RecommendationModel;
 import com.bigdata.covidanalysis.TopNCountriesWithDeathCount.TopNCountriesWithDeathCountMapper;
 import com.bigdata.covidanalysis.TopNCountriesWithDeathCount.TopNCountriesWithDeathCountReducer;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
@@ -36,6 +38,8 @@ import org.apache.hadoop.mapreduce.lib.input.MultipleInputs;
 import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
+import org.apache.mahout.cf.taste.common.TasteException;
+
 
 /**
  *
@@ -49,12 +53,18 @@ public class Driver {
         // Useful for develipment purpose so that you dont have to wait for previous stages to complete 
         // to see the output of job currently under development.
         List<Integer> developmentMode = new ArrayList<>();
-        developmentMode.add(1);
-        developmentMode.add(2);
-        developmentMode.add(3); 
-        developmentMode.add(4); // 4 dependent on output of 3.
-        developmentMode.add(5);
-        developmentMode.add(6);
+//        developmentMode.add(1);
+//        developmentMode.add(2);
+//        developmentMode.add(3); 
+//        developmentMode.add(4); // 4 dependent on output of 3.
+//        developmentMode.add(5);
+//        developmentMode.add(6);
+        try {
+            RecommendationModel.Recommend("/home/ruchit/Downloads/clean_health_product_rating.csv");
+        } catch (TasteException ex) {
+            ex.printStackTrace();
+            Logger.getLogger(Driver.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
         String covidDataInputPath = args[0];
         String ContinentWiseDeathCountOutputPath = args[1];
@@ -220,7 +230,7 @@ public class Driver {
 
         System.out.println("// 6. JOIN =======================================================");
         boolean JoinCountryDataJobStatus = false;
-        if (CountryWiseMinMaxJobStatus && TopNCountriesDeathCountJobStatus) {
+        if (CountryWiseMinMaxJobStatus && TopNCountriesDeathCountJobStatus && developmentMode.contains(6)) {
 
             Job JoinCountryDataJob = Job.getInstance(conf);
 
@@ -247,6 +257,8 @@ public class Driver {
          if (!JoinCountryDataJobStatus) {
             return;
         }
+         
+         
 
     }
 

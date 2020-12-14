@@ -8,7 +8,6 @@ package com.bigdata.covidanalysis.MahoutRecommendation;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
-import org.apache.hadoop.fs.Path;
 import org.apache.mahout.cf.taste.common.TasteException;
 import org.apache.mahout.cf.taste.impl.common.LongPrimitiveIterator;
 import org.apache.mahout.cf.taste.impl.model.file.FileDataModel;
@@ -27,12 +26,9 @@ import org.apache.mahout.cf.taste.similarity.UserSimilarity;
  */
 public class RecommendationModel {
     
-    public static void Recommend(Path inputPath) throws IOException {
+    public static void Recommend(String path) throws IOException, TasteException {
 
         try {
-            String path = inputPath.toString();
-            String fname = "/part-r-00000";
-            path = path + fname;
             File userPreferencesFile = new File(path);
 
             DataModel dataModel = new FileDataModel(userPreferencesFile);
@@ -61,7 +57,7 @@ public class RecommendationModel {
 
         } catch (IOException ex) {
 
-            System.out.println("Exception: " + ex.getMessage());
+            ex.printStackTrace();
 
         } catch (TasteException e) {
             // TODO Auto-generated catch block
@@ -69,5 +65,4 @@ public class RecommendationModel {
         }
 
     }
-    
 }

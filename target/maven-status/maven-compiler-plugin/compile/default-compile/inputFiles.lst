@@ -6,6 +6,7 @@
 /home/ruchit/NetBeansProjects/CovidAnalysis/src/main/java/com/bigdata/covidanalysis/JoinCountryData/JoinCountryMinMaxMapper.java
 /home/ruchit/NetBeansProjects/CovidAnalysis/src/main/java/com/bigdata/covidanalysis/CountryWiseMinMax/CountryWiseMinMaxNewCasesReducer.java
 /home/ruchit/NetBeansProjects/CovidAnalysis/src/main/java/com/bigdata/covidanalysis/JoinCountryData/JoinCountryTopNMapper.java
+/home/ruchit/NetBeansProjects/CovidAnalysis/src/main/java/com/bigdata/covidanalysis/MahoutRecommendation/RecommendationModel.java
 /home/ruchit/NetBeansProjects/CovidAnalysis/src/main/java/com/bigdata/covidanalysis/Driver.java
 /home/ruchit/NetBeansProjects/CovidAnalysis/src/main/java/com/bigdata/covidanalysis/TopNCountriesWithDeathCount/TopNCountriesWithDeathCountReducer.java
 /home/ruchit/NetBeansProjects/CovidAnalysis/src/main/java/com/bigdata/covidanalysis/DeathsMonthWise/MonthWiseDeathCountMapper.java

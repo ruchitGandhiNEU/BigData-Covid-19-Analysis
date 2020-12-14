@@ -11,6 +11,7 @@ com/bigdata/covidanalysis/ContinentWiseCount/ContinentWiseCountMapper.class
 com/bigdata/covidanalysis/JoinCountryData/JoinCountryMinMaxMapper.class
 com/bigdata/covidanalysis/DeathsMonthWise/MonthWiseDeathCountReducer.class
 com/bigdata/covidanalysis/DeathsMonthWise/MonthWiseDeathCountMapper.class
+com/bigdata/covidanalysis/MahoutRecommendation/RecommendationModel.class
 com/bigdata/covidanalysis/CountryWiseMinMax/MinMaxTuple.class
 com/bigdata/covidanalysis/JoinCountryData/JoinCountryTopNMapper.class
 com/bigdata/covidanalysis/CountryWiseMinMax/CountryWiseMinMaxMapper.class
